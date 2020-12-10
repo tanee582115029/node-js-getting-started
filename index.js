@@ -8,6 +8,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.listen(3000, function () { console.log('run on 3000') })
 
-app.get('/webhook', function (req,res) {
+app.post('/webhook', function (req,res) {
   res.json('hi',200)
 })
