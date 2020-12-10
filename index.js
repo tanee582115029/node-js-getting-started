@@ -21,7 +21,7 @@ app.post('/webhook', function (req,res) {
     messages: [
       {
         type: 'text',
-        text: 'hi'+userId
+        text: 'สวัสดีคุณ '+ userId +' เรามาจากอนาคต'
       },
       {
         "type": "flex",
@@ -35,7 +35,7 @@ app.post('/webhook', function (req,res) {
                 "contents": [
                     {
                         "type": "text",
-                        "text": "Awaiting Start",
+                        "text": "เทส flex ใน bot",
                         "size": "xl",
                         "align": "start",
                         "weight": "bold",
@@ -44,7 +44,7 @@ app.post('/webhook', function (req,res) {
                     {
                         "type": "text",
                         "margin": "md",
-                        "text": "Do you want to start to check the history of crop maintenance each day?",
+                        "text": "โย่วๆๆๆๆ",
                         "align": "start",
                         "color": "#595959",
                         "wrap": true,
@@ -59,8 +59,8 @@ app.post('/webhook', function (req,res) {
                         "type": "button",
                         "action": {
                             "type": "message",
-                            "label": "START",
-                            "text": "start crop",
+                            "label": "dflb",
+                            "text": "กดดดดดดดด",
                         },
                         "color": "#0AC775",
                         "style": "primary",
