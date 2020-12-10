@@ -9,5 +9,5 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.listen(3000, function () { console.log('run on 3000') })
 
 app.get('/webhook', function (req,res) {
-  res.statusCode(200)
+  res.json('hi',200)
 })
