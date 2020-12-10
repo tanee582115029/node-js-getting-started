@@ -21,7 +21,56 @@ app.post('/webhook', function (req,res) {
     messages: [
       {
         type: 'text',
-        text: 'hi'
+        text: 'hi'+userId
+      },
+      {
+        "type": "flex",
+        "altText": "Awaiting Start",
+        "contents": {
+            "type": "bubble",
+            "direction": "ltr",
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "Awaiting Start",
+                        "size": "xl",
+                        "align": "start",
+                        "weight": "bold",
+                        "color": "#000000",
+                    },
+                    {
+                        "type": "text",
+                        "margin": "md",
+                        "text": "Do you want to start to check the history of crop maintenance each day?",
+                        "align": "start",
+                        "color": "#595959",
+                        "wrap": true,
+                    },
+                ],
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "message",
+                            "label": "START",
+                            "text": "start crop",
+                        },
+                        "color": "#0AC775",
+                        "style": "primary",
+                    },
+                    {
+                        "type": "spacer",
+                    },
+                ],
+            },
+        },
       }
     ],
   })
