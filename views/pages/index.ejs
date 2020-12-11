@@ -20,7 +20,7 @@
   function checkLoginState() {               // Called when a person is finished with the Login Button.
     FB.getLoginStatus(function(response) { 
       console.log(' || accessToken '+  response.authResponse.accessToken)  // See the onlogin handler
-      document.getElementsByClassName("fb-data").innerHTML = "token = "+response.authResponse.accessToken;
+      document.getElementById("fb-data").innerHTML = "token = "+response.authResponse.accessToken;
       statusChangeCallback(response);
     });
   }
@@ -49,7 +49,7 @@
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-  document.getElementsByClassName("gg-data").innerHTML = "token = "+id_token;
+  document.getElementById("gg-data").innerHTML = "token = "+id_token;
 }
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
@@ -68,12 +68,12 @@
 
 <hr/>
 
-<div class="fb-data">
+<div id="fb-data">
 </div>
 
 <hr/>
 
-<div class="gg-data">
+<div id="gg-data">
 </div>
 
 
